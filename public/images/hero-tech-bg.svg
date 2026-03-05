@@ -1,0 +1,129 @@
+<svg width="1920" height="800" viewBox="0 0 1920 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0f1729;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#162033;stop-opacity:1" />
+    </linearGradient>
+
+    <radialGradient id="heroGlow">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0" />
+    </radialGradient>
+
+    <pattern id="heroGrid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#06b6d4" stroke-width="0.5" opacity="0.12"/>
+    </pattern>
+
+    <filter id="heroGlow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base gradient background -->
+  <rect width="1920" height="800" fill="url(#heroBg)"/>
+
+  <!-- Grid overlay -->
+  <rect width="1920" height="800" fill="url(#heroGrid)"/>
+
+  <!-- Large glowing orbs for depth -->
+  <circle cx="400" cy="200" r="350" fill="url(#heroGlow)" filter="url(#heroGlow)" opacity="0.5"/>
+  <circle cx="1500" cy="600" r="450" fill="url(#heroGlow)" filter="url(#heroGlow)" opacity="0.4"/>
+  <circle cx="900" cy="400" r="300" fill="url(#heroGlow)" filter="url(#heroGlow)" opacity="0.3"/>
+
+  <!-- Wireframe 3D cube (left side) -->
+  <g transform="translate(200, 300)" opacity="0.08" stroke="#06b6d4" stroke-width="2" fill="none">
+    <!-- Front face -->
+    <path d="M 0 0 L 150 0 L 150 150 L 0 150 Z"/>
+    <!-- Back face (perspective) -->
+    <path d="M 40 -40 L 190 -40 L 190 110 L 40 110 Z"/>
+    <!-- Connecting lines -->
+    <line x1="0" y1="0" x2="40" y2="-40"/>
+    <line x1="150" y1="0" x2="190" y2="-40"/>
+    <line x1="150" y1="150" x2="190" y2="110"/>
+    <line x1="0" y1="150" x2="40" y2="110"/>
+  </g>
+
+  <!-- Wireframe pyramid (right side) -->
+  <g transform="translate(1500, 150)" opacity="0.08" stroke="#06b6d4" stroke-width="2" fill="none">
+    <!-- Base -->
+    <path d="M 0 200 L 200 200 L 200 0 L 0 0 Z"/>
+    <!-- Apex point -->
+    <line x1="0" y1="0" x2="100" y2="-120"/>
+    <line x1="200" y1="0" x2="100" y2="-120"/>
+    <line x1="200" y1="200" x2="100" y2="-120"/>
+    <line x1="0" y1="200" x2="100" y2="-120"/>
+  </g>
+
+  <!-- Tech circuit pathways -->
+  <g opacity="0.1" stroke="#06b6d4" stroke-width="2" fill="none" stroke-dasharray="10,5">
+    <path d="M 100 400 Q 400 200, 800 400 T 1600 400"/>
+    <path d="M 200 100 Q 600 300, 1000 100 T 1800 100"/>
+    <path d="M 0 600 Q 500 400, 1000 650 T 1920 600"/>
+  </g>
+
+  <!-- Crosshair targets scattered -->
+  <g opacity="0.06" stroke="#06b6d4" stroke-width="1.5" fill="none">
+    <g transform="translate(700, 150)">
+      <circle r="40"/>
+      <circle r="25"/>
+      <line x1="-40" y1="0" x2="-30" y2="0"/>
+      <line x1="30" y1="0" x2="40" y2="0"/>
+      <line x1="0" y1="-40" x2="0" y2="-30"/>
+      <line x1="0" y1="30" x2="0" y2="40"/>
+    </g>
+
+    <g transform="translate(1300, 500)">
+      <circle r="35"/>
+      <circle r="20"/>
+      <line x1="-35" y1="0" x2="-25" y2="0"/>
+      <line x1="25" y1="0" x2="35" y2="0"/>
+      <line x1="0" y1="-35" x2="0" y2="-25"/>
+      <line x1="0" y1="25" x2="0" y2="35"/>
+    </g>
+  </g>
+
+  <!-- Floating particles -->
+  <g opacity="0.25" fill="#06b6d4">
+    <circle cx="250" cy="180" r="3"/>
+    <circle cx="550" cy="420" r="2"/>
+    <circle cx="850" cy="220" r="2.5"/>
+    <circle cx="1150" cy="580" r="2"/>
+    <circle cx="1450" cy="320" r="3"/>
+    <circle cx="1750" cy="650" r="2.5"/>
+    <circle cx="450" cy="680" r="2"/>
+    <circle cx="1050" cy="120" r="2.5"/>
+    <circle cx="1650" cy="450" r="2"/>
+  </g>
+
+  <!-- Hexagonal pattern overlay (subtle) -->
+  <g opacity="0.04" stroke="#06b6d4" stroke-width="1" fill="none">
+    <!-- Hexagons in a grid pattern -->
+    <g transform="translate(100, 100)">
+      <path d="M 30 0 L 60 15 L 60 45 L 30 60 L 0 45 L 0 15 Z"/>
+    </g>
+    <g transform="translate(180, 100)">
+      <path d="M 30 0 L 60 15 L 60 45 L 30 60 L 0 45 L 0 15 Z"/>
+    </g>
+    <g transform="translate(140, 155)">
+      <path d="M 30 0 L 60 15 L 60 45 L 30 60 L 0 45 L 0 15 Z"/>
+    </g>
+  </g>
+
+  <!-- Diagonal accent lines -->
+  <g opacity="0.08" stroke="url(#heroGlow)" stroke-width="3">
+    <line x1="0" y1="0" x2="400" y2="400"/>
+    <line x1="1920" y1="0" x2="1520" y2="400"/>
+    <line x1="600" y1="800" x2="1000" y2="400"/>
+    <line x1="1320" y1="800" x2="1720" y2="400"/>
+  </g>
+
+  <!-- Scanline animation -->
+  <rect width="1920" height="3" y="0" fill="url(#heroGlow)" opacity="0.15">
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="0 800" dur="5s" repeatCount="indefinite"/>
+  </rect>
+</svg>
